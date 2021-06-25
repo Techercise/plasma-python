@@ -9,12 +9,12 @@
 #SBATCH --mem-per-cpu=0
 #SBATCH --exclusive
 
+module load python
+source activate test
 module load cgpu
 module load cuda
 module load gcc
 module load openmpi
-module load python
-source activate test
 
 # rm /global/cscratch1/sd/$USER/model_checkpoints/*
 # rm /global/cscratch1/sd/$USER/results/*
