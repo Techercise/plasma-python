@@ -14,7 +14,7 @@ module load cuda
 module load gcc
 module load openmpi
 module load python
-source activate tf1
+source activate test
 
 # rm /global/cscratch1/sd/$USER/model_checkpoints/*
 # rm /global/cscratch1/sd/$USER/results/*
