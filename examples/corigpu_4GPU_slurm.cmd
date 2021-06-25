@@ -13,6 +13,7 @@ module load python
 source activate test
 module load cgpu
 module load cuda
+module load cudnn
 module load gcc
 module load openmpi
 
