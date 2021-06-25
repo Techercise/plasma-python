@@ -14,7 +14,7 @@ user_subdir: True
 fs_path_output: '/global/cscratch1/sd/'
 user_subdir_output: True
 target: 'hinge' # 'maxhinge' # 'maxhinge' # 'binary' # 'hinge'
-num_gpus: 4  # per node
+num_gpus: 1  # per node
 paths:
   signal_prepath: '/signal_data/' # /signal_data/jet/
   shot_list_dir: '/shot_lists/'
