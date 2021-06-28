@@ -7,11 +7,10 @@
 #SBATCH --ntasks-per-socket=2
 #SBATCH -c 4
 #SBATCH --mem-per-cpu=0
-#SBATCH --exclusive
 
+module load cgpu
 module load python
 source activate test
-module load cgpu
 module load cuda
 module load cudnn
 module load gcc
