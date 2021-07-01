@@ -1,4 +1,4 @@
-# TigerGPU Tutorial
+# CoriGPU Tutorial
 *Last updated 2021-7-1.*
 
 ## Building the package
@@ -45,7 +45,8 @@ python/3.8-anaconda-2020.11
 ```
 
 Install mpi4py in your conda environment with the following command:
-```MPICC="$(which mpicc)" pip install --no-binary mpi4py mpi4py
+```
+MPICC="$(which mpicc)" pip install --no-binary mpi4py mpi4py
 ```
 
 Next, install the `plasma-python` package:
