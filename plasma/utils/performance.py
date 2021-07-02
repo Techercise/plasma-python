@@ -10,7 +10,7 @@ matplotlib.use('Agg')  # for machines that don't have a display
 import matplotlib.pyplot as plt  # noqa
 from matplotlib import rc  # noqa
 rc('font', **{'family': 'serif', 'sans-serif': ['Times']})
-rc('text', usetex=True)
+rc('text', usetex=False)
 
 
 class PerformanceAnalyzer():
