@@ -160,7 +160,6 @@ For non-interactive batch analysis, make sure to allocate exactly 1 MPI process 
 ```bash
 #!/bin/bash
 #SBATCH -t 02:00:00
-#SBATCH -N X
 #SBATCH -G 4
 #SBATCH --ntasks-per-node=4
 #SBATCH --ntasks-per-socket=2
@@ -175,12 +174,10 @@ module load cuda
 module load cudnn
 module load gcc
 module load openmpi
-export OMPI_MCA_btl="tcp,self,vader"
 
-srun python mpi_learn.py
+mpirun -N 4 python mpi_learn.py
 
 ```
-where `X` is the number of nodes for distibuted training and the total number of GPUs is `X * 4`. This configuration guarantees 1 MPI process per GPU, regardless of the value of `X`. 
 
 Update the `num_gpus` value in `conf.yaml` to correspond to the total number of GPUs specified for your Slurm allocation.
 

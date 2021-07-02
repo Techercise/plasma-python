@@ -21,4 +21,4 @@ module load openmpi
 # rm /global/cscratch1/sd/$USER/Graph/*
 # rm /global/cscratch1/sd/$USER/normalization/*
 
-mpirun -N 1 python mpi_learn.py
+mpirun -N 4 python mpi_learn.py
