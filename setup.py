@@ -5,8 +5,8 @@ from setuptools import setup, find_packages
 import plasma.version
 
 try:
-    os.environ['MPICC'] = subprocess.check_output(
-        "which mpicc", shell=True).decode("utf-8")
+    os.environ['HIPCC'] = subprocess.check_output(
+        "which hipcc", shell=True).decode("utf-8")
 except BaseException:
     print("Please set up the OpenMPI environment")
     exit(1)
