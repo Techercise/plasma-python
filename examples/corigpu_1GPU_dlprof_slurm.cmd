@@ -15,4 +15,4 @@ module load gcc
 module load openmpi
 source activate test
 
-srun -C gpu -t 03:00:00 -G 1 dlprof python mpi_learn.py
+srun -C gpu -t 03:00:00 -G 1 dlprof --nsys_opts="-d 300 --capture-range cudaProfilerApi" python mpi_learn.py
