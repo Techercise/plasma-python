@@ -4,7 +4,7 @@
 
 # will do stuff in fs_path / [username] / signal_data | shot_lists | processed shots, etc.
 
-fs_path: '/global/cscratch1/sd/'
+fs_path: '/gpfs/alpine/csc434/scratch/'
 target: 'hinge' # 'maxhinge' # 'maxhinge' # 'binary' # 'hinge'
 num_gpus: 4  # per node
 paths:
