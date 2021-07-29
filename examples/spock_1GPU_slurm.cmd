@@ -12,7 +12,7 @@
 export MPIR_CVAR_GPU_EAGER_DEVICE_MEM=0
 export MPICH_GPU_SUPPORT_ENABLED=1
 
-export HIPCC_COMPILE_FLAGS_APPEND="$HIPCC_COMPILE_FLAGS_APPEND -I${MPICH_DIR}/include -L${MPICH_DIR}/lib -lmpi -L/opt/cray/pe/mpich/8.1.4/gtl/lib -lmpi_gtl_hsa"
+export HIPCC_COMPILE_FLAGS_APPEND="$HIPCC_COMPILE_FLAGS_APPEND -I${MPICH_DIR}/include -L${MPICH_DIR}/lib -lmpi -L/opt/cray/pe/mpich/8.1.7/gtl/lib -lmpi_gtl_hsa"
 
 module swap PrgEnv-cray PrgEnv-gnu
 module load rocm
