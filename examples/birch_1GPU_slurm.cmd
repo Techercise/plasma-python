@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -o frnn_1gpu_spock.out
-#SBATCH -p batch
+#SBATCH -o frnn_1gpu_birch.out
+#SBATCH -p caar
 #SBATCH -t 03:00:00
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
