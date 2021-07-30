@@ -5,7 +5,6 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks-per-socket=1
-#SBATCH --gres=gpu:1
 #SBATCH --exclusive
 
 module load rocm
