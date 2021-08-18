@@ -9,9 +9,9 @@
 # will output csvlog, trained model checkpoints, etc.
 # in fs_path_output / [username] / results | csv_logs | model_checkpoints | Graph, etc.
 
-fs_path: '/global/cscratch1/sd/'
+fs_path: '/gpfs/alpine/csc434/scratch/'
 user_subdir: True
-fs_path_output: '/global/cscratch1/sd/'
+fs_path_output: '/gpfs/alpine/csc434/scratch/'
 user_subdir_output: True
 target: 'hinge' # 'maxhinge' # 'maxhinge' # 'binary' # 'hinge'
 num_gpus: 4  # per node
