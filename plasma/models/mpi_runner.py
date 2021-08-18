@@ -67,8 +67,11 @@ if g.backend == 'tf' or g.backend == 'tensorflow':
     # instead". See tf_export.py
     if g.tf_ver >= parse_version('1.14.0'):
         import tensorflow.compat.v1 as tf
+        g.print_unique("\n\n\n*****Using tf1 compatibility*****\n\n\n")
+        g.print_unique(str(g.tf_ver))
     else:
         import tensorflow as tf
+        g.print_unique("\n\n\n*****Using regular tf1*****\n\n\n")
     # TODO(KGF): above, builder.py (bug workaround), mpi_launch_tensorflow.py,
     # and runner.py are the only files that import tensorflow directly
 
