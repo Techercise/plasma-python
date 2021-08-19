@@ -252,47 +252,8 @@ python mpi_learn.py
 
 A regular FRNN run will produce several outputs and callbacks.
 
-### TensorBoard visualization
-
-Currently supports graph visualization, histograms of weights, activations and biases, and scalar variable summaries of losses and accuracies.
-
-The summaries are written in real time to `/tigress/<netid>/Graph`. For macOS, you can set up the `sshfs` mount of the [`/tigress`](https://researchcomputing.princeton.edu/storage/tigress) filesystem and view those summaries in your browser.
-
-To install SSHFS on a macOS system, you could follow the instructions here:
-https://github.com/osxfuse/osxfuse/wiki/SSHFS
-Or use [Homebrew](https://brew.sh/), `brew cask install osxfuse; brew install sshfs`. Note, to install and/or use `osxfuse` you may need to enable its kernel extension in: System Preferences → Security & Privacy → General
-
-After installation, execute:
-```
-sshfs -o allow_other,defer_permissions netid@tigergpu.princeton.edu:/tigress/<netid>/ <destination folder name on your laptop>/
-```
-The local destination folder may be an existing (possibly nonempty) folder. If it does not exist, SSHFS will create the folder. You can confirm that the operation succeeded via the `mount` command, which prints the list of currently mounted filesystems if no arguments are given.
-
-Launch TensorBoard locally (assuming that it is installed on your local computer):
-```
-python -m tensorboard.main --logdir <destination folder name on your laptop>/Graph
-```
-A URL should be emitted to the console output. Navigate to this link in your browser. If the TensorBoard interface does not open, try directing your browser to `localhost:6006`.
-
-You should see something like:
-
-![tensorboard example](https://github.com/PPPLDeepLearning/plasma-python/blob/master/docs/images/tb.png)
-
-When you are finished with analyzing the summaries in TensorBoard, you may wish to unmount the remote filesystem:
-```
-umount  <destination folder name on your laptop>
-```
-The local destination folder will remain present, but it will no longer contain the remote files. It will be returned to its previous state, either empty or containing the original local files. Note, the `umount` command is appropriate for macOS systems; some Linux systems instead offer the `fusermount` command.  
-
-These commands may be useful when the SSH connection is lost and an existing mount point cannot be re-mounted, e.g. errors such as:
-```
-mount_osxfuse: mount point <destination folder name on your laptop> is itself on a OSXFUSE volume
-```
-
-More aggressive options such as `umount -f <destination folder name on your laptop>` and alternative approaches may be necessary; see [discussion here](https://github.com/osxfuse/osxfuse/issues/45#issuecomment-21943107).
-
 ## Custom visualization
-Besides TensorBoard summaries, you can visualize the accuracy of the trained FRNN model using the custom Python scripts and notebooks included in the repository.
+You can visualize the accuracy of the trained FRNN model using the custom Python scripts and notebooks included in the repository.
 
 ### Learning curves, example shots, and ROC per epoch
 
@@ -303,9 +264,7 @@ python performance_analysis.py
 ```
 The `performance_analysis.py` script uses the file produced as a result of training the neural network as an input, and produces several `.png` files with plots as an output.
 
-[//]: # (Add details about sig_161308test.npz, disruptive_alarms_test.npz, 4x metric* png, accum_disruptions.png, test_roc.npz)
-
-In addition, you can check the scalar variable summaries for training loss, validation loss, and validation ROC logged at `/tigress/<netid>/csv_logs` (each run will produce a new log file with a timestamp in name).
+In addition, you can check the scalar variable summaries for training loss, validation loss, and validation ROC logged at `/outputdir/<userid>/csv_logs` (each run will produce a new log file with a timestamp in name).
 
 Sample notebooks for analyzing the files in this directory can be found in `examples/notebooks/`. For instance, the [LearningCurves.ipynb](https://github.com/PPPLDeepLearning/plasma-python/blob/master/examples/notebooks/LearningCurves.ipynb) notebook contains a variation on the following code snippet:
 ```python
