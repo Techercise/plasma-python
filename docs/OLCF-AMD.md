@@ -167,6 +167,7 @@ if left empty `[]` will use all valid signals defined on a machine. Only set thi
 Other parameters configured in the `conf.yaml` include batch size, learning rate, neural network topology and special conditions foir hyperparameter sweeps.
 
 ### Preprocessing the input data
+***Preprocessing the input data is currently not required on Spock as the data that is available is already preprocessed.***
 
 ```bash
 cd examples/
@@ -213,6 +214,7 @@ Use the Slurm job scheduler to perform batch or interactive analysis on the Spoc
 ### Batch job
 
 A sample batch job script for 1 GPU is provided in the examples directory and is called spock_1GPU_slurm.cmd. It can be run using: `sbatch spock_1GPU_slurm.cmd`
+Note that, the project/account (`-A`) and partition (`-p) arugments will need to reflect your project and assigned partition.
 
 Some batch job tips:
 * For non-interactive batch analysis, make sure to allocate exactly 1 MPI process per GPU where `X` is the number of nodes for distibuted training and the total number of GPUs is `X * 4`. This configuration guarantees 1 MPI process per GPU, regardless of the value of `X`. 
