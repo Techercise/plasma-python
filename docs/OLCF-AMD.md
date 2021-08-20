@@ -28,12 +28,12 @@ To install Miniconda, download the Linux installer [here](https://docs.conda.io/
 
 Once Miniconda is installed, create a conda environment:
 ```
-conda create -n your\_env\_name python=3.8 -y
+conda create -n your_env_name python=3.8 -y
 ```
 
 Then, activate the environment:
 ```
-conda activate your\_env\_name
+conda activate your_env_name
 ```
 
 Ensure the following packages are installed in your conda environment:
@@ -49,7 +49,7 @@ tensorflow-rocm   # pip install tensorflow-rocm
 #### Modules
 In order to load the correct modules with ease, creating a profile is recommended
 ```
-vim frnn\_spock.profile
+vim frnn_spock.profile
 ```
 
 Write the following to the profile:
