@@ -1,6 +1,4 @@
 from __future__ import print_function
-import sys
-sys.path.insert(0, '..')
 import plasma.global_vars as g
 from plasma.primitives.shots import ShotListFiles
 import data.signals as sig
