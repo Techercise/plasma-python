@@ -5,7 +5,7 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks-per-socket=1
-#SBATCH -c 1
+#SBATCH --exclusive
 
 module load cgpu
 module load python
