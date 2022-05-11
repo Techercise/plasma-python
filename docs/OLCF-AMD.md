@@ -1,5 +1,5 @@
-# OLCF Spock  Tutorial
-*Last updated 2021-8-19*
+# OLCF Spock & Crusher  Tutorial
+*Last updated 2022-5-11*
 
 *This document is built off of the excellent how-to guide created for [Princeton's TigerGPU](https://github.com/Techercise/plasma-python/blob/master/docs/PrincetonUTutorial.md)*
 
