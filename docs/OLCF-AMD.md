@@ -4,11 +4,12 @@
 *This document is built off of the excellent how-to guide created for [Princeton's TigerGPU](https://github.com/Techercise/plasma-python/blob/master/docs/PrincetonUTutorial.md)*
 
 ## Building the package
-### Login to Spock
+### Login to Spock or Crusher
 
-First, login to the Spock headnode via ssh:
+Login to either the Spock or Crusher headnodes via ssh:
 ```
-ssh -X <yourusername>@spock.olcf.ornl.gov
+ssh -X <yourusername>@spock.olcf.ornl.gov #Spock login
+ssh -X <yourusername>@crusher.olcf.ornl.gov #Crusher login
 ```
 Note, `-X` is optional; it is only necessary if you are planning on performing remote visualization, e.g. the output `.png` files from the below [section](#Learning-curves-and-ROC-per-epoch). Trusted X11 forwarding can be used with `-Y` instead of `-X` and may prevent timeouts, but it disables X11 SECURITY extension controls. 
 
